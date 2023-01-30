@@ -27,6 +27,14 @@
                     </li>
                     @endguest
                 </ul>
+                
+                <ul class="navbar-nav">
+                    <a class="nav-link" >Create E-TradeLicense</a>
+                    <select name="dog-names" id="dog-names"  onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                        <option value="city_corporation">City Corporation</option>
+                        <option value="municipality">Municipality</option>
+                    </select>
+                </ul>
             </div>
         </div>
     </nav>

@@ -22,13 +22,13 @@ class CustomAuthController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             return redirect()->intended('dashboard')
-                        ->withSuccess('Signed in');
+                ->withSuccess('Signed in');
         }
         return redirect("/")->withSuccess('Login details are not valid');
     }
 
     public function registration(){
-        return view('auth.registration');;
+        return view('auth.registration');
     }
     
     public function customRegistration(Request $request)
@@ -41,7 +41,7 @@ class CustomAuthController extends Controller
         $data = $request->all();
         $check = $this->create($data);
          
-        return redirect("dashboard")->withSuccess('You have signed-in');
+        return redirect("/");
     }
 
     public function create(array $data)
